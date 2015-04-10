@@ -1,0 +1,17 @@
+Gen0cide, on 10 Apr 2015 - 09:24 AM, said:
+    Two new filters are needed now with the updated script (works perfect now by the way).
+
+    "BIS_fnc_dynamictext" = !"then {   ['Welcome to Heli Service',0,0.6,2,1] spawn bis_fnc_dynamictext;" !"sleep 10;" !"['Touch down your Heli while servicing yo"
+    AND
+    setDamage = !"] spawn bis_fnc_dynamictext;" !"sleep 3;" !"_veh setDamage 0;" !"sleep 7;" !"['Heli repaired.',0,0.6,2,1] spawn bis_fnc_dy"
+
+ 
+
+Gen0cide, on 06 Apr 2015 - 9:10 PM, said:
+    Here is what I did to get this working with the "other" antihack tho it still has some issues with GMG weapons and repairing helis that I have found (didn't repair the missing main rotor on my black and white Orca).
+
+    BIS_fnc_dynamictext = !"rue;" !"['Welcome to Vehicle Service',0,0.6,2,1] spawn bis_fnc_dynamictext;" !"sleep 5;" !"_delay = ((_this select 3) select 0);_"
+
+    setAmmo = !"mount) then {sleep (_delay*(1 - (getAmmoCargo _veh))); _veh setAmmoCargo _amount;};sleep 0.1;player action ["moveToDriver", _"
+
+    setDamage = !"> (1 - _amount)) then {sleep (_delay*(damage _veh));" !"_veh setDamage (1 - _amount);};" !"if ((getRepairCargo _veh) < _amount) then"
